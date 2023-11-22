@@ -5,8 +5,9 @@ use std::io::Write;
 pub fn password_maker() -> String {
     let chars = "abcdefghijklmopqrstuvwxyz";
     let upper_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let special = "1234567890@#&é'(§è!çà)-_{}";
-    let combined = format!("{}{}{}", chars, upper_chars, special);
+    let special = "@#&é'(§è!çà)-_{}";
+    let numbers = "1234567890";
+    let combined = format!("{}{}{}", chars, upper_chars, numbers, special);
 
     print!("Choose a length: ");
     io::stdout().flush().unwrap(); 
