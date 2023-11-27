@@ -7,7 +7,7 @@ pub fn password_maker() -> String {
     let upper_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let special = "@#&é'(§è!çà)-_{}";
     let numbers = "1234567890";
-    let combined = format!("{}{}{}", chars, upper_chars, numbers, special);
+    let combined = format!("{}{}{}{}", chars, upper_chars, numbers, special);
 
     print!("Choose a length: ");
     io::stdout().flush().unwrap(); 
